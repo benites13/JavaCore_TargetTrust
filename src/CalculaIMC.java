@@ -11,6 +11,13 @@ public class CalculaIMC {
         float valorIMC = peso / (altura * altura);
 
         String resultadoIMC = String.format("%.2f", valorIMC);
+
+        System.out.print(resultadoIMC + ": " + classificaIMC(valorIMC));
+
+        inputTeclado.close();
+    }
+
+    public static String classificaIMC(float valorIMC){
         String classificacao = "";
 
         if(valorIMC < 18.5){
@@ -24,9 +31,6 @@ public class CalculaIMC {
         }else if(valorIMC >= 40){
             classificacao = "Obesidade Grave";
         }
-
-        System.out.print(resultadoIMC + ": " + classificacao);
-
-        inputTeclado.close();
+        return classificacao;
     }
 }
