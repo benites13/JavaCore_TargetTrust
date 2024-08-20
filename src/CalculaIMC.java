@@ -8,9 +8,11 @@ public class CalculaIMC {
         float altura = inputAltura.nextFloat();
         System.out.print("Informar peso: ");
         float peso = inputPeso.nextFloat();
-        
+
         float valorIMC = peso / (altura * altura);
 
-        System.out.print(valorIMC);
+        String resultadoIMC = String.format("%.2f", valorIMC);
+
+        System.out.print(resultadoIMC);
     }
 }
